@@ -471,8 +471,27 @@ mappings = {
         }
     },
 
+    "pm2_5_ug_m3": {
+        "device_type": "sensor",
+        "object_suffix": "pm2_5",
+        "config": {
+            "name": "2.5um Fine Particulate Matter",
+            "unit_of_measurement": "ug/m3",
+            "icon": "mdi:blur",
+            "value_template": "{{ value|int }}"
+        }
+    },
+    "pm10_0_ug_m3": {
+        "device_type": "sensor",
+        "object_suffix": "pm10",
+        "config": {
+            "name": "10um Coarse Particulate Matter",
+            "unit_of_measurement": "ug/m3",
+            "icon": "mdi:blur",
+            "value_template": "{{ value|int }}"
+        }
+    },
 }
-
 
 def mqtt_connect(client, userdata, flags, rc):
     """Callback for MQTT connects."""
